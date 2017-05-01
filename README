@@ -1,1 +1,8 @@
+prerequesites
+  sudo apt-get install python3-flask
+
+Installation
+
+
+
 using nginx, gunicorn, https://damyanon.net/flask-series-deployment/
