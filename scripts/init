@@ -1,0 +1,15 @@
+#!/bin/sh -eu
+
+initgpio() {
+  PIN="${1}"
+  INITIAL_VALUE="${2}"
+  if [ ! -e "/sys/class/gpio/gpio${PIN}" ]; then
+    echo "${PIN}" > /sys/class/gpio/export
+    sleep 1
+  fi
+  echo "out" > "/sys/class/gpio/gpio${PIN}/direction"
+  echo "${INITIAL_VALUE}" > "/sys/class/gpio/gpio${PIN}/value"
+}
+
+initgpio 22 1
+initgpio 23 1
