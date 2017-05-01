@@ -1,0 +1,10 @@
+#!/bin/bash -eu
+
+echo 'cpu temp'
+cat /sys/class/thermal/thermal_zone0/temp
+
+echo 'gpu temp'
+/opt/vc/bin/vcgencmd measure_temp
+
+echo 'outside temp'
+cat /sys/bus/w1/devices/28-000003e0bf4a/w1_slave
