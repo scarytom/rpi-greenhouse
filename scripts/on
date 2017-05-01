@@ -1,0 +1,9 @@
+#!/bin/sh -eu
+
+VALUE="0"
+
+PIN="22"
+echo "${VALUE}" > "/sys/class/gpio/gpio${PIN}/value"
+
+PIN="23"
+echo "${VALUE}" > "/sys/class/gpio/gpio${PIN}/value"
