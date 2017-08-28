@@ -26,3 +26,17 @@ sudo service nginx restart
 ln -s /etc/nginx/sites-available/greenhouse /etc/nginx/sites-enabled/greenhouse
 
 python3 ~/rpi-greenhouse-master/app.py &
+
+
+# crontab
+0 18 1-31/2 * * /home/tom/rpi-greenhouse-master/scripts/tray-on >> /home/tom/log/traylog.log 2>&1
+1 * * * * /home/tom/rpi-greenhouse-master/scripts/tray-off >> /home/tom/log/traylog.log 2>&1
+
+20 18 2-30/2 * * /home/tom/rpi-greenhouse-master/scripts/plants-on >> /home/tom/log/plantslog.log 2>&1
+51 * * * * /home/tom/rpi-greenhouse-master/scripts/plants-off >> /home/tom/log/plantslog.log 2>&1
+
+### testy
+#49 10 2-30/2 * * /home/tom/rpi-greenhouse-master/scripts/tray-on >> /home/tom/log/traylog.log 2>&1
+#50 * * * * /home/tom/rpi-greenhouse-master/scripts/tray-off >> /home/tom/log/traylog.log 2>&1
+#* * * * * echo 'hi' > /home/tom/log/test.log
+
