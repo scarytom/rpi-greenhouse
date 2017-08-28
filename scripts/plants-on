@@ -1,5 +1,7 @@
 #!/bin/sh -eu
 
+echo "$(date -uIs) plants on"
+
 ON='0'
 OFF='1'
 

@@ -1,5 +1,7 @@
 #!/bin/sh -eu
 
+echo "$(date -uIs) tray on"
+
 ON='0'
 OFF='1'
 
@@ -10,5 +12,5 @@ echo "${OFF}" > "/sys/class/gpio/gpio${PLANTS_PIN}/value"
 
 TRAY_PIN='22'
 echo "${ON}" > "/sys/class/gpio/gpio${TRAY_PIN}/value"
-sleep 15
+sleep 25
 echo "${OFF}" > "/sys/class/gpio/gpio${TRAY_PIN}/value"

@@ -1,5 +1,7 @@
 #!/bin/sh -eu
 
+echo "$(date -uIs) plants off"
+
 OFF='1'
 
 PLANTS_PIN='23'

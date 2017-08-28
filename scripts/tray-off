@@ -1,5 +1,7 @@
 #!/bin/sh -eu
 
+echo "$(date -uIs) tray off"
+
 OFF='1'
 
 TRAY_PIN='22'
