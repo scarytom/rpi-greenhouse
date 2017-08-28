@@ -2,8 +2,6 @@
 
 OFF='1'
 
-TRAY_PIN='22'
-echo "${OFF}" > "/sys/class/gpio/gpio${TRAY_PIN}/value"
-
 PLANTS_PIN='23'
+
 echo "${OFF}" > "/sys/class/gpio/gpio${PLANTS_PIN}/value"

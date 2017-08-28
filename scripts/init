@@ -11,5 +11,9 @@ initgpio() {
   echo "${INITIAL_VALUE}" > "/sys/class/gpio/gpio${PIN}/value"
 }
 
-initgpio 22 1
-initgpio 23 1
+OFF='1'
+TRAY_PIN='22'
+PLANTS_PIN='23'
+
+initgpio "${TRAY_PIN}" "${OFF}"
+initgpio "${PLANTS_PIN}" "${OFF}"
