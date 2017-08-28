@@ -6,3 +6,23 @@ Installation
 
 
 using nginx, gunicorn, https://damyanon.net/flask-series-deployment/
+
+
+
+edit /boot/config.txt to enable one-wire overlays
+apt-get install python3-flask nginx
+
+vi /etc/nginx/sites-enabled/greenhouse
+server {
+    location / {
+        proxy_pass http://localhost:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+sudo service nginx restart
+
+
+ln -s /etc/nginx/sites-available/greenhouse /etc/nginx/sites-enabled/greenhouse
+
+python3 ~/rpi-greenhouse-master/app.py &
