@@ -5,7 +5,7 @@ echo "$(date -uIs) tray on"
 ON='0'
 OFF='1'
 
-PLANTS_PIN='23'
+PLANTS_PIN='24'
 echo "${ON}" > "/sys/class/gpio/gpio${PLANTS_PIN}/value"
 sleep 1
 echo "${OFF}" > "/sys/class/gpio/gpio${PLANTS_PIN}/value"

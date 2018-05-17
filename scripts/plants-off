@@ -4,6 +4,6 @@ echo "$(date -uIs) plants off"
 
 OFF='1'
 
-PLANTS_PIN='23'
+PLANTS_PIN='24'
 
 echo "${OFF}" > "/sys/class/gpio/gpio${PLANTS_PIN}/value"
