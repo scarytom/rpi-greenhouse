@@ -7,5 +7,5 @@ OFF='1'
 
 TRAY_PIN='22'
 echo "${ON}" > "/sys/class/gpio/gpio${TRAY_PIN}/value"
-sleep 25
+sleep 60
 echo "${OFF}" > "/sys/class/gpio/gpio${TRAY_PIN}/value"
