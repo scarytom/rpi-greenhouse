@@ -5,10 +5,10 @@ echo "$(date -uIs) plants on"
 ON='0'
 OFF='1'
 
-PLANTS_PIN='24'
+PLANTS_PIN='27'
 
 echo "${ON}" > "/sys/class/gpio/gpio${PLANTS_PIN}/value"
 
-sleep 1800
+sleep 3600
 
 echo "${OFF}" > "/sys/class/gpio/gpio${PLANTS_PIN}/value"

@@ -13,7 +13,9 @@ initgpio() {
 
 OFF='1'
 TRAY_PIN='22'
-PLANTS_PIN='24'
+PLANTS_PIN='27'
+OTHER_PIN='17'
 
 initgpio "${TRAY_PIN}" "${OFF}"
 initgpio "${PLANTS_PIN}" "${OFF}"
+initgpio "${OTHER_PIN}" "${OFF}"
